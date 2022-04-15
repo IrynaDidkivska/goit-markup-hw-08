@@ -1,0 +1,49 @@
+//flex
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+//font
+
+%main-font-styles {
+  font-family: $main-font-family;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: $main-letter-spacing;
+
+  color: $primary-text;
+}
+
+%headlines {
+  justify-content: center;
+  margin-bottom: $margin-fifty;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+%gallery-headline {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+%footer-title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $title-text;
+}

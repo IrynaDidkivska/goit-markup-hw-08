@@ -1,0 +1,15 @@
+@import "../components/footer-address";
+@import "../components/footer-socials";
+@import "../components/footer-subscribe";
+@import "../components/logo";
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $hero-bgc;
+}
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}

@@ -1,0 +1,29 @@
+.benefits__list {
+  display: flex;
+}
+
+.benefits__item:not(:last-child) {
+  margin-right: $margin-list-set;
+}
+
+.benefits__wrapper {
+  @extend %flex-center;
+  height: 120px;
+  margin-bottom: $margin-list-set;
+
+  border-radius: 4px;
+  background-color: $bgc-secondary;
+}
+
+.benefits__text {
+  color: $subtitle-text;
+}
+.benefits__title {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}

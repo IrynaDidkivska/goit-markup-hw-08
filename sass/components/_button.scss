@@ -1,0 +1,97 @@
+.button {
+  min-width: 200px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+
+  border: none;
+  color: $btn-text;
+  background-color: $btn-main-bgc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: $transition-color-bgc;
+}
+
+//Form button
+.form__button {
+  display: block;
+  margin: auto;
+  padding: 10px 0px;
+  transition: $transition-color-bgc;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-bgc-hover-focus;
+  }
+}
+
+//Footer
+.subscribe__button {
+  display: inline-flex;
+  margin-left: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  text-align: left;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-bgc-hover-focus;
+  }
+}
+
+//Portfolio
+.button__primary,
+.button__secondary {
+  min-width: 73px;
+  padding: 6px 22px;
+  text-align: center;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+
+  cursor: pointer;
+  border: none;
+}
+.button__primary {
+  color: $btn-text;
+  background-color: $btn-main-bgc;
+
+  border-radius: 4px;
+
+  transition: color $timing-function, background-color $timing-function,
+    box-shadow $timing-function;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+.button__secondary {
+  display: inline-block;
+
+  color: $primary-text;
+  background-color: $bgc-secondary;
+  border-radius: 4px;
+
+  transition: color $timing-function, background-color $timing-function,
+    box-shadow $timing-function;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    color: $btn-text;
+    background-color: $btn-main-bgc;
+  }
+}

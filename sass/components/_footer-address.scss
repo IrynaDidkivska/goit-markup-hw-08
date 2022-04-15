@@ -1,0 +1,28 @@
+.footer__address {
+  margin-right: 70px;
+}
+.address {
+  font-style: normal;
+}
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.address__link {
+  font-style: normal;
+  color: $link-logo;
+  transition: $transition-color;
+
+  &:hover,
+  &:focus {
+    color: $link-accent;
+  }
+}
+.address__auth-link {
+  color: $color-opacity-light;
+  transition: $transition-color;
+
+  &:hover,
+  &:focus {
+    color: $link-accent;
+  }
+}

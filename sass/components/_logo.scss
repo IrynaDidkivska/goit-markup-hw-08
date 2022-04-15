@@ -1,0 +1,34 @@
+.logo-link {
+  display: block;
+
+  margin-right: 93px;
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  color: $link-main;
+
+  transition: $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $link-accent;
+  }
+}
+.logo-link__web {
+  color: $link-accent;
+}
+
+.logo-link__studio {
+  color: $link-logo;
+  &:hover,
+  &:focus {
+    color: $link-accent;
+  }
+}
+.logo-link__footer {
+  margin-bottom: 20px;
+}
