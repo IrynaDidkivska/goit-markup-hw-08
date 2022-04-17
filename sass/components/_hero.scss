@@ -5,8 +5,6 @@
   margin-right: $margin-auto;
   padding: 200px 0;
 
-  text-align: center;
-
   color: $title-text;
   background-color: $hero-bgc;
 
@@ -27,10 +25,7 @@
   margin-right: $margin-auto;
   margin-bottom: $margin-list-set;
 
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
+  @include fonts(44px, 1.36, 0.06em, 900);
   text-transform: uppercase;
 }
 

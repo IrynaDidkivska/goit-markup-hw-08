@@ -3,9 +3,7 @@
 .section--other-bgc {
   background-color: $bgc-secondary;
 }
-.section__title {
-  @extend %headlines;
-}
+
 .team {
   display: flex;
 }
@@ -18,20 +16,20 @@
 
 .team__item + .team__item {
   margin-left: $margin-list-set;
-  text-align: center;
 }
 .team__thumb {
   margin-top: $margin-list-set;
   margin-bottom: $margin-list-set;
 }
 .team__title {
-  @extend %gallery-headline;
   margin-bottom: 10px;
-
+  @include fonts(16px, 1.18);
   font-weight: 500;
 }
 .team__text {
   margin-bottom: 16px;
-  @extend %gallery-headline;
+  @include fonts(16px, 1.18);
+  font-weight: 500;
+
   color: $subtitle-text;
 }

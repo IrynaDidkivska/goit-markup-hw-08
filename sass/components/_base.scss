@@ -1,5 +1,7 @@
 @import "../utils/reset";
 
 body {
-  @extend %main-font-styles;
+  font-family: $main-font-family;
+  @include fonts(14px);
+  text-align: center;
 }

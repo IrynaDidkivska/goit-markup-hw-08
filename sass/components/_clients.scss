@@ -1,6 +1,4 @@
-.section__title {
-  @extend %headlines;
-}
+@import "../components/title";
 
 .clients {
   @extend %flex-center;

@@ -1,25 +1,10 @@
+@import "../utils/placeholder";
 .button {
-  min-width: 200px;
-
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  text-align: center;
-  letter-spacing: 0.06em;
-
-  cursor: pointer;
-
-  border: none;
-  color: $btn-text;
-  background-color: $btn-main-bgc;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  transition: $transition-color-bgc;
+  @extend %btn-index;
 }
-
 //Form button
 .form__button {
+  @extend %btn-index;
   display: block;
   margin: auto;
   padding: 10px 0px;
@@ -33,6 +18,7 @@
 
 //Footer
 .subscribe__button {
+  @extend %btn-index;
   display: inline-flex;
   margin-left: 12px;
   padding-top: 10px;
@@ -47,26 +33,11 @@
 }
 
 //Portfolio
-.button__primary,
-.button__secondary {
-  min-width: 73px;
-  padding: 6px 22px;
-  text-align: center;
 
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  letter-spacing: 0.03em;
-
-  cursor: pointer;
-  border: none;
-}
 .button__primary {
+  @extend %btn-portfolio;
   color: $btn-text;
   background-color: $btn-main-bgc;
-
-  border-radius: 4px;
 
   transition: color $timing-function, background-color $timing-function,
     box-shadow $timing-function;
@@ -78,11 +49,11 @@
   }
 }
 .button__secondary {
+  @extend %btn-portfolio;
   display: inline-block;
 
   color: $primary-text;
   background-color: $bgc-secondary;
-  border-radius: 4px;
 
   transition: color $timing-function, background-color $timing-function,
     box-shadow $timing-function;

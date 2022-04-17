@@ -1,5 +1,9 @@
 .footer__title {
-  @extend %footer-title;
+  margin-bottom: 20px;
+  @include fonts(14px, 1.14, null, 700);
+  text-align: left;
+  text-transform: uppercase;
+  color: $title-text;
 }
 
 .footer__list {

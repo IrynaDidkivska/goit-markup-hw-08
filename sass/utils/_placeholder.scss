@@ -5,45 +5,48 @@
   justify-content: center;
   align-items: center;
 }
-//font
+//btn
+%btn-index {
+  min-width: 200px;
 
-%main-font-styles {
-  font-family: $main-font-family;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: $main-letter-spacing;
-
-  color: $primary-text;
-}
-
-%headlines {
-  justify-content: center;
-  margin-bottom: $margin-fifty;
-
+  font-family: inherit;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 16px;
+  line-height: 1.87;
   text-align: center;
-  letter-spacing: 0.03em;
-}
-%gallery-headline {
-  margin-bottom: 10px;
+  letter-spacing: 0.06em;
 
+  cursor: pointer;
+
+  border: none;
+  color: $btn-text;
+  background-color: $btn-main-bgc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: $transition-color-bgc;
+}
+%btn-portfolio {
+  min-width: 73px;
+  padding: 6px 22px;
+  text-align: center;
+
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.62;
   letter-spacing: 0.03em;
-  text-align: center;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
 }
 
-%footer-title {
-  margin-bottom: 20px;
-
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-
-  color: $title-text;
+//possition
+%portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }

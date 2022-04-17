@@ -5,17 +5,13 @@
 }
 .form__title {
   margin-bottom: 12px;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.03em;
-  text-align: center;
+  @include fonts(20px, 1.15);
 }
 
 .form__label {
   margin-bottom: 4px;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
+  @include fonts(12px, 1.16, 0.01em);
+  text-align: left;
 
   color: $form-label-text;
 }
@@ -75,8 +71,7 @@
     top: 12px;
     left: 16px;
 
-    line-height: 1.14;
-    letter-spacing: 0.01em;
+    @include fonts(14px, 1.14, 0.01em);
     color: rgba(117, 117, 117, 0.5);
   }
 }
@@ -100,8 +95,7 @@
 
 .consent__text {
   margin-left: 7px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include fonts(14px, 1.71);
   text-align: left;
 
   color: $form-label-text;
