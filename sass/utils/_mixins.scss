@@ -1,6 +1,14 @@
+//font
 @mixin fonts($fz, $lh: 1.71, $ls: 0.03em, $fw: null) {
   font-size: $fz;
   font-weight: $fw;
   line-height: $lh;
   letter-spacing: $ls;
+}
+
+//flex
+@mixin flex($dp: flex, $jc: center, $ai: center) {
+  display: $dp;
+  justify-content: $jc;
+  align-items: $ai;
 }

@@ -1,5 +1,5 @@
 .nav__list {
-  @extend %flex-center;
+  @include flex();
 }
 
 .nav__item {

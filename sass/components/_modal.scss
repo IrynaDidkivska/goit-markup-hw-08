@@ -65,7 +65,7 @@
   left: 50%;
   top: 50%;
 
-  @extend %flex-center;
+  @include flex();
   color: $backdrop-icon-hover;
   transform: translate(-50%, -50%);
 

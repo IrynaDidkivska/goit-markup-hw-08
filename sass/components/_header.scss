@@ -5,9 +5,8 @@
   position: relative;
   border-bottom: 1px solid #ececec;
 }
-.header__container {
-  display: block;
-  text-align: left;
+.header__container .header__nav {
+  @include flex(null, space-between);
 
   @media screen and (min-width: 1200px) {
     display: flex;

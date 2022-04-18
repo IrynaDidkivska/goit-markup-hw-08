@@ -1,13 +1,13 @@
-.benefits__list {
-  display: flex;
-}
+// .benefits__list {
+//   // display: flex;
+// }
 
-.benefits__item:not(:last-child) {
-  margin-right: $margin-list-set;
-}
+// .benefits__item:not(:last-child) {
+//   margin-right: $margin-list-set;
+// }
 
 .benefits__wrapper {
-  @extend %flex-center;
+  @include flex();
   height: 120px;
   margin-bottom: $margin-list-set;
   text-align: left;
@@ -18,10 +18,10 @@
 .benefits__text {
   color: $subtitle-text;
   text-align: left;
+  padding-bottom: $margin-list-set;
 }
 .benefits__title {
   margin-bottom: 10px;
   @include fonts(14px, 1.14, null, 700);
-  text-align: left;
   text-transform: uppercase;
 }

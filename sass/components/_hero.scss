@@ -1,12 +1,11 @@
 .hero {
   min-width: 480px;
-  height: 600px;
+  height: 400px;
   padding: 118px 0;
   margin-left: $margin-auto;
   margin-right: $margin-auto;
 
   color: $title-text;
-  background-color: $hero-bgc;
 
   background-image: linear-gradient(
       to right,
@@ -14,7 +13,7 @@
       rgba(47, 48, 58, 0.4)
     ),
     url("../image/hero-bgi-sq.jpeg");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 

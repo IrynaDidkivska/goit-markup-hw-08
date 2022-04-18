@@ -76,7 +76,7 @@
   }
 }
 .consent {
-  @extend %flex-center;
+  @include flex();
 
   margin-top: 20px;
   margin-bottom: $margin-list-set;

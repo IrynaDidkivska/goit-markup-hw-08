@@ -1,6 +1,6 @@
 @import "../components/button";
 .button__list {
-  @extend %flex-center;
+  @include flex();
   margin-bottom: $margin-list-set;
 }
 .button__item:not(:last-child) {

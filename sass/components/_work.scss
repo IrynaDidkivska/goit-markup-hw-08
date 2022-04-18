@@ -1,4 +1,6 @@
 .section--no-padiing-top {
+  display: none;
+
   padding-top: 0;
 }
 .section__title {
@@ -26,7 +28,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  @extend %flex-center;
+  @include flex();
 
   width: 100%;
   height: 70px;

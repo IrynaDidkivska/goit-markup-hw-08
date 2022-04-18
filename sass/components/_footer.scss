@@ -1,5 +1,4 @@
 @import "../components/footer-address";
-@import "../components/footer-socials";
 @import "../components/footer-subscribe";
 @import "../components/logo";
 
@@ -9,7 +8,28 @@
 
   background-color: $hero-bgc;
 }
-.footer__container {
+// .footer__container {
+
+//   display: flex;
+//   align-items: baseline;
+// }
+.footer__title {
+  margin-bottom: 20px;
+  @include fonts(14px, 1.14, null, 700);
+  text-transform: uppercase;
+  color: $title-text;
+}
+
+.footer__list {
+  @include flex();
+}
+.footer__item {
   display: flex;
-  align-items: baseline;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 60px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }

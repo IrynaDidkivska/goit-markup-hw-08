@@ -7,3 +7,8 @@
     padding-bottom: 94px;
   }
 }
+
+.section__title {
+  margin-bottom: $margin-list-set;
+  @include fonts(36px, 1.16, null, 700);
+}
