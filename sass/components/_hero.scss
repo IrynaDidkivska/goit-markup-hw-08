@@ -1,9 +1,9 @@
 .hero {
-  max-width: 1600px;
+  min-width: 480px;
   height: 600px;
+  padding: 118px 0;
   margin-left: $margin-auto;
   margin-right: $margin-auto;
-  padding: 200px 0;
 
   color: $title-text;
   background-color: $hero-bgc;
@@ -17,16 +17,33 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    height: 400px;
+    padding: 118px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    height: 600px;
+    padding: 200px 0;
+  }
 }
 
 .hero__title {
-  width: 696px;
+  width: 360px;
   margin-left: $margin-auto;
   margin-right: $margin-auto;
   margin-bottom: $margin-list-set;
 
-  @include fonts(44px, 1.36, 0.06em, 900);
+  @include fonts(26px, 1.61, 0.06em, 900);
   text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    width: 696px;
+    @include fonts(44px, 1.36, 0.06em, 900);
+  }
 }
 
 .hero__button {

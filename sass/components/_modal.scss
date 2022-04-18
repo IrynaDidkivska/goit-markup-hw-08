@@ -11,6 +11,7 @@
   opacity: 1;
   visibility: visible;
   transition: opacity $timing-function, visibility $timing-function;
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -20,19 +21,22 @@
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 528px;
-
   background-color: $form-bgc;
   border-radius: 4px;
 
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform $timing-function, opacity $timing-function;
+  @media (min-width: 1200px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 528px;
 
-  .backdrop.is-hidden & {
-    transform: translate(-50%, -50%) scale(0.7);
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $timing-function, opacity $timing-function;
+
+    .backdrop.is-hidden & {
+      transform: translate(-50%, -50%) scale(0.7);
+    }
   }
 }
 .modal__button {

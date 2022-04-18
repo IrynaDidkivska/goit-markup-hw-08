@@ -1,6 +1,15 @@
+@import "../components/logo";
+@import "../components/mobile-menu";
+
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
 .header__container {
-  @extend %flex-center;
+  display: block;
+  text-align: left;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }

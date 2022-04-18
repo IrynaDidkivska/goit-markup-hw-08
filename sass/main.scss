@@ -2,6 +2,7 @@
 @import "./utils/variables";
 @import "./utils/visually-hidden";
 @import "./utils/mixins";
+@import "./utils/breakpoints";
 @import "./utils/animation";
 @import "./utils/placeholder";
 
@@ -13,7 +14,6 @@
 
 //components block
 @import "./components/header";
-@import "./components/logo";
 @import "./components/nav-list";
 @import "./components/auth-list";
 @import "./components/hero";

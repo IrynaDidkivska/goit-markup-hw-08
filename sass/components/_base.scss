@@ -5,3 +5,7 @@ body {
   @include fonts(14px);
   text-align: center;
 }
+
+body.modal-open {
+  overflow: hidden;
+}
