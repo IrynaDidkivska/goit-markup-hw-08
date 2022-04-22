@@ -1,6 +1,6 @@
 .section--no-padiing-top {
   padding-top: 0;
-  @include mq(tablet-only) {
+  @include mq(notDesktop) {
     display: none;
   }
 }

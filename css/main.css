@@ -1207,7 +1207,7 @@ body.modal-open {
   padding-top: 0;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+@media screen and (max-width: 1199.98px) {
   .section--no-padiing-top {
     display: none;
   }
@@ -1455,7 +1455,7 @@ body.modal-open {
   margin-bottom: -30px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .clients {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -1474,12 +1474,6 @@ body.modal-open {
   width: 210px;
   height: 92px;
   margin-bottom: 30px;
-}
-
-@media screen and (max-width: 767.98px) {
-  .clients__item:nth-child(odd) {
-    margin-right: 30px;
-  }
 }
 
 @media screen and (min-width: 480px) {
@@ -1966,7 +1960,7 @@ body.modal-open {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767.98px) {
   .button__list {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -1977,13 +1971,25 @@ body.modal-open {
   }
 }
 
+@media screen and (max-width: 767.98px) {
+  .button__item:nth-child(-n + 3) {
+    margin-bottom: 15px;
+  }
+}
+
 .button__item:not(:last-child) {
   margin-right: 8px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767.98px) {
   .button__item:not(:last-child):nth-child(-n + 3) {
     margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .button__item:not(:last-child) {
+    margin-bottom: 0;
   }
 }
 
@@ -2099,23 +2105,27 @@ body.modal-open {
 
 .portfolio {
   margin-bottom: -30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 @media screen and (max-width: 767.98px) {
   .portfolio {
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .portfolio {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
   }
 }
 
