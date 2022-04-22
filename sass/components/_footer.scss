@@ -8,11 +8,44 @@
 
   background-color: $hero-bgc;
 }
-// .footer__container {
+.footer__container {
+  text-align: center;
 
-//   display: flex;
-//   align-items: baseline;
-// }
+  @include mq(tablet) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  @include mq(desktop) {
+    text-align: start;
+  }
+}
+.footer__wrapper {
+  @include mq(tablet-only) {
+    display: flex;
+    justify-content: center;
+  }
+  @include mq(desktop) {
+    display: flex;
+  }
+}
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+
+  @include mq(tablet-only) {
+    justify-content: center;
+    flex-basis: calc(100% / 2);
+  }
+
+  @include mq(desktop) {
+    justify-content: left;
+    margin-right: 93px;
+    margin-bottom: 0;
+  }
+}
 .footer__title {
   margin-bottom: 20px;
   @include fonts(14px, 1.14, null, 700);

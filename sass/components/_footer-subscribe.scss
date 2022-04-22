@@ -1,5 +1,7 @@
 .footer__subscribe {
-  margin-left: auto;
+  @include mq(desktop) {
+    max-width: 570px;
+  }
 }
 .subscribe__title {
   margin-bottom: 20px;
@@ -7,17 +9,36 @@
   text-transform: uppercase;
   color: $title-text;
 }
+.subscribe__form {
+  @include mq(tablet-only) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include mq(desktop) {
+    @include flex();
+    align-items: baseline;
+  }
+}
 .subscribe__input {
-  width: 450px;
+  width: 100%;
   padding: 15px;
   margin-bottom: 20px;
-  @include fonts(16px, 1.25, null, 700);
+  @include fonts(16px, 1.25);
   text-align: left;
 
   border: 1px solid $color-opacity-midle;
   border-radius: 4px;
   color: $color-opacity-light;
   background-color: $hero-bgc;
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 450px;
+  }
+
+  @include mq(desktop) {
+    width: 358px;
+  }
 }
 
 .subscribe__icon {

@@ -1,24 +1,61 @@
 .section__title {
   margin-bottom: $margin-list-set;
-  @include fonts(36px, 1.16, null, 700);
+  @include fonts(28px, 1.18, null, 700);
+
+  @include mq(desktop) {
+    margin-bottom: $margin-fifty;
+    @include fonts(36px, 1.16, null, 700);
+  }
 }
 .clients {
-  @include flex(flex, space-between);
+  @include flex();
   flex-wrap: wrap;
+  margin-bottom: -30px;
+
+  @include mq(tablet-only) {
+    justify-content: space-between;
+  }
+  @include mq(desktop) {
+    flex-wrap: nowrap;
+  }
 }
 
 .clients__item {
   width: 210px;
   height: 92px;
 
-  &:nth-child(-n + 4) {
-    margin-bottom: $margin-list-set;
+  margin-bottom: $margin-list-set;
+
+  &:nth-child(odd) {
+    @include mq(mobile-only) {
+      margin-right: $margin-list-set;
+    }
   }
 
-  // &:not(:last-child) {
-  //   margin-right: $margin-list-set;
-  // }
+  @include mq(mobile) {
+    &:nth-child(-n + 4) {
+      margin-bottom: $margin-list-set;
+    }
+  }
+  @include mq(tablet) {
+    width: 226px;
+    margin-right: 0;
+  }
+  @include mq(tablet-only) {
+    &:nth-child(-n + 3) {
+      margin-bottom: $margin-list-set;
+    }
+  }
+  @include mq(desktop) {
+    width: 170px;
+  }
+  @include mq(desktop) {
+    &:not(:last-child) {
+      margin-right: $margin-list-set;
+    }
+  }
 }
+
 .clients__link {
   @include flex();
   width: 100%;

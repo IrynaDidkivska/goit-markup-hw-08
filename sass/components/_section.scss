@@ -2,7 +2,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -10,5 +10,9 @@
 
 .section__title {
   margin-bottom: $margin-list-set;
-  @include fonts(36px, 1.16, null, 700);
+  @include fonts(28px, 1.18, null, 700);
+
+  @include mq(desktop) {
+    @include fonts(36px, 1.17, null, 700);
+  }
 }

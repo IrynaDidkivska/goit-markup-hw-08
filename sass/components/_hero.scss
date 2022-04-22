@@ -1,46 +1,17 @@
-.hero {
-  min-width: 480px;
-  height: 400px;
-  padding: 118px 0;
-  margin-left: $margin-auto;
-  margin-right: $margin-auto;
-
-  color: $title-text;
-
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url("../image/hero-bgi-sq.jpeg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-    height: 400px;
-    padding: 118px 0;
-  }
-
-  @media screen and (min-width: 1200px) {
-    max-width: 1600px;
-    height: 600px;
-    padding: 200px 0;
-  }
-}
+@import "../components/hero_bgi";
 
 .hero__title {
-  width: 360px;
+  display: block;
   margin-left: $margin-auto;
   margin-right: $margin-auto;
   margin-bottom: $margin-list-set;
+  max-width: 360px;
 
   @include fonts(26px, 1.61, 0.06em, 900);
   text-transform: uppercase;
 
-  @media screen and (min-width: 1200px) {
-    width: 696px;
+  @include mq(desktop) {
+    max-width: 696px;
     @include fonts(44px, 1.36, 0.06em, 900);
   }
 }

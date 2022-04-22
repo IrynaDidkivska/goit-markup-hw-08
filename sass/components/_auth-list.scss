@@ -1,17 +1,26 @@
 .auth-nav {
-  @include flex();
-  margin-left: $margin-auto;
-}
+  display: none;
 
+  @include mq(tablet) {
+    @include flex(flex, flex-start);
+    margin-left: 84px;
+    flex-wrap: wrap;
+  }
+  @include mq(desktop) {
+    @include flex();
+    margin-left: $margin-auto;
+    flex-wrap: nowrap;
+  }
+}
 .auth-nav__item:not(:last-child) {
-  margin-right: $margin-fifty;
+  margin-bottom: 10px;
+  @include mq(desktop) {
+    margin-right: $margin-fifty;
+    margin-bottom: 0;
+  }
 }
 .auth-nav__link {
-  @include flex();
-
-  padding-top: $padding-set-nav;
-  padding-bottom: $padding-set-nav;
-  @include fonts(null, 1.14, 0.02em, 500);
+  @include fonts(12px, 1.16, 0.02em, 500);
 
   color: $auth-link;
   transition: $transition-color;
@@ -20,13 +29,25 @@
   &:focus {
     color: $link-accent;
   }
+  @include mq(desktop) {
+    @include flex();
+    @include fonts(14px, 1.14, 0.02em, 500);
+    padding-top: $padding-set-nav;
+    padding-bottom: $padding-set-nav;
+  }
 }
 .auth-nav__icon {
-  display: inline-flex;
   margin-right: 10px;
-  content: "";
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   fill: currentColor;
+  @include mq(tablet-only) {
+    margin-right: 8px;
+    width: 10px;
+    height: 14px;
+  }
+}
+.auth-nav__icon--envelope {
+  @include mq(tablet-only) {
+    width: 14px;
+    height: 10px;
+  }
 }

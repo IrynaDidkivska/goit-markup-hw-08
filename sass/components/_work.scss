@@ -1,7 +1,8 @@
 .section--no-padiing-top {
-  display: none;
-
   padding-top: 0;
+  @include mq(tablet-only) {
+    display: none;
+  }
 }
 .section__title {
   margin-bottom: 10px;

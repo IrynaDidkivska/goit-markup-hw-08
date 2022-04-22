@@ -12,7 +12,14 @@
   &:focus {
     color: $link-accent;
   }
-  @media screen and (min-width: 1200px) {
+  @include mq(mobile-only) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  @include mq(tablet) {
+    margin-right: 88px;
+  }
+  @include mq(desktop) {
     margin-right: 93px;
     @include fonts(26px, 1.19, null, 700);
   }
@@ -29,5 +36,6 @@
   }
 }
 .logo-link__footer {
+  margin-right: 0;
   margin-bottom: 20px;
 }

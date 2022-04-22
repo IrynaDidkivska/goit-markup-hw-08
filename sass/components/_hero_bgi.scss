@@ -1,0 +1,110 @@
+.hero {
+  margin-left: $margin-auto;
+  margin-right: $margin-auto;
+  padding: 118px 0;
+  height: 400px;
+  max-width: $mobile;
+
+  color: $title-text;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../../image/mb/jpeg/Header-mb.jpg);
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(47, 48, 58, 0.4)),
+      to(rgba(47, 48, 58, 0.4))
+    ),
+    -webkit-image-set(url(../../image/mb/webp/Header-mb.webp) 1x);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include mq(retina) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(..//../image/mb/@2x/Header-mb@2x.jpg);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(rgba(47, 48, 58, 0.4)),
+        to(rgba(47, 48, 58, 0.4))
+      ),
+      -webkit-image-set(url(../../image/mb/webp/Header-mb@2x.webp) 2x);
+  }
+  @include mq(tablet) {
+    max-width: $tablet;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(..//../image/tb/jpeg/Header-tb.jpeg);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(rgba(47, 48, 58, 0.4)),
+        to(rgba(47, 48, 58, 0.4))
+      ),
+      -webkit-image-set(url(../../image/tb/webp/Header-tb.webp) 1x);
+
+    @include mq(retina) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(..//../image/tb/@2x/Header-tb@2x.jpeg);
+      background-image: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from(rgba(47, 48, 58, 0.4)),
+          to(rgba(47, 48, 58, 0.4))
+        ),
+        -webkit-image-set(url(../../image/tb/webp/Header-tb@2x.webp) 2x);
+    }
+  }
+  @include mq(desktop) {
+    max-width: $desktop;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(..//../image/ds/jpeg/Header-ds.jpeg);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(rgba(47, 48, 58, 0.4)),
+        to(rgba(47, 48, 58, 0.4))
+      ),
+      -webkit-image-set(url(../../image/ds/webp/Header-ds.webp) 1x);
+  }
+  @include mq(retina) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(..//../image/ds/@2x/Header-ds@2x.jpg);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(rgba(47, 48, 58, 0.4)),
+        to(rgba(47, 48, 58, 0.4))
+      ),
+      -webkit-image-set(url(../../image/ds/webp/Header-ds.webp) 2x);
+  }
+}

@@ -1,14 +1,19 @@
 @import "../components/logo";
-@import "../components/mobile-menu";
+@import "../components/nav-list";
+@import "../components/auth-list";
 
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
   border-bottom: 1px solid #ececec;
+  background-color: $bgc-mobile;
+  z-index: 1;
 }
-.header__container .header__nav {
-  @include flex(null, space-between);
+.header__container {
+  @include flex;
 
-  @media screen and (min-width: 1200px) {
-    display: flex;
+  @include mq(mobile-only) {
+    justify-content: space-between;
   }
 }

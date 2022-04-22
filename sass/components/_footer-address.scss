@@ -1,7 +1,22 @@
+.footer__address {
+  @include mq(tablet-only) {
+    justify-content: center;
+    flex-basis: calc(100% / 2);
+  }
+
+  @include mq(desktop) {
+    flex-grow: 1;
+  }
+}
 .address {
   font-style: normal;
   margin-bottom: 60px;
+  @include mq(desktop) {
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
 }
+
 .address__item:not(:last-child) {
   margin-bottom: 9px;
 }

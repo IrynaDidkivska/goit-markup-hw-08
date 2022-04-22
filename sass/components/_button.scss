@@ -20,11 +20,19 @@
 .subscribe__button {
   @extend %btn-index;
   display: inline-flex;
-  margin-left: 12px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 29px;
   text-align: left;
+
+  @include mq(desktop) {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 12px;
+  }
 
   &:hover,
   &:focus {

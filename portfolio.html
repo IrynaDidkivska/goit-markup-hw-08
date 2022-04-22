@@ -25,15 +25,94 @@
         <a class="logo-link" href="./index.html" lang="en"
           ><span class="logo-link__web">Web</span>Studio</a
         >
+        <!-- Мобильное меню -->
+        <button class="menu-btn is-active" type="button" data-menu-button>
+          <svg
+            class="menu-btn__icon"
+            width="40"
+            height="40"
+            role="button"
+            aria-expanded="false"
+            aria-controls="menu-mobile"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="menu-btn__icon-open"
+              href="./image/icons.svg#menu_mm"
+            ></use>
+            <use
+              class="menu-btn__icon-close"
+              href="./image/icons.svg#close_mm"
+            ></use>
+          </svg>
+        </button>
+        <div class="menu-mobile" id="menu-mobile" data-menu>
+          <nav class="menu-mobile__nav">
+            <ul class="menu-mobile__list">
+              <li class="menu-mobile__item">
+                <a href="./index.html" class="menu-mobile__link">Студия</a>
+              </li>
+              <li class="menu-mobile__item">
+                <a
+                  href="./portfolio.html"
+                  class="menu-mobile__link menu-mobile__link--current"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="menu-mobile__item">
+                <a href="/Контакты" class="menu-mobile__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="mobile__auth-nav">
+            <li class="mobile__auth__item">
+              <a href="tel:+380961111111" class="mobile__auth__tel">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile__auth__item">
+              <a
+                class="mobile__auth__email"
+                href="mailto:info@devstudio.com"
+                lang="en"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile__socials">
+            <li class="mobile__item">
+              <a href="https://www.instagram.com/" class="mobile__link"
+                >Instagram</a
+              >
+            </li>
+            <li class="mobile__item">
+              <a href="" class="mobile__link">Twitter</a>
+            </li>
+            <li class="mobile__item">
+              <a href="https://www.facebook.com/" class="mobile__link"
+                >Facebook</a
+              >
+            </li>
+            <li class="mobile__item">
+              <a
+                href="https://www.linkedin.com/"
+                class="mobile__link mobile__link--content"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="./index.html" class="nav__link">Студия</a>
+              <a href="./index.html" class="nav__link nav__link--current"
+                >Студия</a
+              >
             </li>
             <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link nav__link--current"
-                >Портфолио</a
-              >
+              <a href="./portfolio.html" class="nav__link">Портфолио</a>
             </li>
             <li class="nav__item">
               <a href="/Контакты" class="nav__link">Контакты</a>
@@ -44,7 +123,11 @@
         <ul class="auth-nav">
           <li class="auth-nav__item">
             <a class="auth-nav__link" href="mailto:info@devstudio.com" lang="en"
-              ><svg class="auth-nav__icon" width="16" height="12">
+              ><svg
+                class="auth-nav__icon auth-nav__icon--envelope"
+                width="16"
+                height="12"
+              >
                 <use href="./image/icons.svg#envelope"></use>
               </svg>
               info@devstudio.com</a
@@ -52,7 +135,7 @@
           </li>
           <li class="auth-nav__item">
             <a href="tel:+380961111111" class="auth-nav__link"
-              ><svg class="auth-nav__icon" width="16" height="12">
+              ><svg class="auth-nav__icon" width="10" height="16">
                 <use href="./image/icons.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -90,13 +173,60 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__pic"
-                    src="./image/img-0-hw2.jpeg"
-                    alt="Фото специалистов"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/ds/webp/portfolio_1-ds.webp    1x,
+                        ./image/ds/webp/portfolio_1-ds@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./image/ds/jpeg/portfolio_1-ds.jpeg   1x,
+                        ./image/ds/@2x/portfolio_1-ds@2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/tb/webp/portfolio_1-tb.webp    1x,
+                        ./image/tb/webp/portfolio_1-tb@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./image/tb/jpeg/portfolio_1-tb.jpg    1x,
+                        ./image/tb/@2x/portfolio_1-tb@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/mb/webp/portfolio_1-mb.webp    1x,
+                        ./image/mb/webp/portfolio_1-mb@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./image/mb/@2x/portfolio_1-mb@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="portfolio__pic"
+                      src="./image/mb/jpeg/portfolio_1-mb.jpg"
+                      alt="Фото специалистов"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -116,13 +246,60 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__pic"
-                    src="./image/img-1-hw2.jpeg"
-                    alt="Игроки в баскетбол"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/ds/webp/portfolio_2-ds.webp    1x,
+                        ./image/ds/webp/portfolio_2-ds@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./image/ds/jpeg/portfolio_2-ds.jpeg  1x,
+                        ./image/ds/@2x/portfolio_2-ds@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/tb/webp/portfolio_2-tb.webp    1x,
+                        ./image/tb/webp/portfolio_2-tb@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./image/tb/jpeg/portfolio_2-tb.jpeg   1x,
+                        ./image/tb/@2x/portfolio_2-tb@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/mb/webp/portfolio_2-mb.webp    1x,
+                        ./image/mb/webp/portfolio_2-mb@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./image/mb/@2x/portfolio_2-mb@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="portfolio__pic"
+                      src="./image/mb/jpeg/portfolio_2-mb.jpg"
+                      alt="Игроки в баскетбол"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -143,13 +320,60 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__pic"
-                    src="./image/img-2-hw2.jpeg"
-                    alt="Логотив ресторана Сифуд"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/ds/webp/portfolio_3-ds.webp    1x,
+                        ./image/ds/webp/portfolio_3-ds@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./image/ds/jpeg/portfolio_3-ds.jpeg  1x,
+                        ./image/ds/@2x/portfolio_3-ds@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/tb/webp/portfolio_3-tb.webp    1x,
+                        ./image/tb/webp/portfolio_3-tb@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./image/tb/jpeg/portfolio_3-tb.jpeg   1x,
+                        ./image/tb/@2x/portfolio_3-tb@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/mb/webp/portfolio_3-mb.webp    1x,
+                        ./image/mb/webp/portfolio_3-mb@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./image/mb/@2x/portfolio_3-mb@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="portfolio__pic"
+                      src="./image/mb/jpeg/portfolio_3-mb.jpg"
+                      alt="Логотив ресторана Сифуд"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -170,13 +394,61 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__pic"
-                    src="./image/img-3-hw2.jpeg"
-                    alt="Наушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/ds/webp/portfolio_4-ds.webp    1x,
+                        ./image/ds/webp/portfolio_4-ds@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./image/ds/jpeg/portfolio_4-ds.jpeg  1x,
+                        ./image/ds/@2x/portfolio_4-ds@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/tb/webp/portfolio_4-tb.webp    1x,
+                        ./image/tb/webp/portfolio_4-tb@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./image/tb/jpeg/portfolio_4-tb.jpeg   1x,
+                        ./image/tb/@2x/portfolio_4-tb@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/mb/webp/portfolio_4-mb.webp    1x,
+                        ./image/mb/webp/portfolio_4-mb@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./image/mb/@2x/portfolio_4-mb@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="portfolio__pic"
+                      src="./image/mb/jpeg/portfolio_4-mb.jpg"
+                      alt="Наушники"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="portfolio__overlay overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -197,13 +469,60 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__pic"
-                    src="./image/img-4-hw2.jpeg"
-                    alt="Коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/ds/webp/portfolio_5-ds.webp    1x,
+                        ./image/ds/webp/portfolio_5-ds@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./image/ds/jpeg/portfolio_5-ds.jpeg  1x,
+                        ./image/ds/@2x/portfolio_5-ds@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/tb/webp/portfolio_5-tb.webp    1x,
+                        ./image/tb/webp/portfolio_5-tb@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./image/tb/jpeg/portfolio_5-tb.jpeg   1x,
+                        ./image/tb/@2x/portfolio_5-tb@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/mb/webp/portfolio_5-mb.webp    1x,
+                        ./image/mb/webp/portfolio_5-mb@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./image/mb/@2x/portfolio_5-mb@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="portfolio__pic"
+                      src="./image/mb/jpeg/portfolio_5-mb.jpg"
+                      alt="Коробки"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="portfolio__overlay overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -224,13 +543,53 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__pic"
-                    src="./image/img-5-hw2.jpeg"
-                    alt="Монитор"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/ds/webp/portfolio_6-ds.webp    1x,
+                        ./image/ds/webp/portfolio_6-ds@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp" />
+                    <source
+                      srcset="
+                        ./image/ds/jpeg/portfolio_6-ds.jpeg  1x,
+                        ./image/ds/@2x/portfolio_6-ds@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="
+                        ./image/tb/webp/portfolio_6-tb.webp    1x,
+                        ./image/tb/webp/portfolio_6-tb@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp" />
+                    <source
+                      srcset="
+                        ./image/tb/jpeg/portfolio_6-tb.jpeg   1x,
+                        ./image/tb/@2x/portfolio_6-tb@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="
+                        ./image/mb/webp/portfolio_6-mb.webp    1x,
+                        ./image/mb/webp/portfolio_6-mb@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp" />
+                    <source
+                      srcset="./image/mb/@2x/portfolio_6-mb@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg" />
+                    <img
+                      class="portfolio__pic"
+                      src="./image/mb/jpeg/portfolio_6-mb.jpg"
+                      alt="Монитор"
+                      width="370"
+                      height="294"
+                  /></picture>
                   <div class="portfolio__overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -251,13 +610,53 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__pic"
-                    src="./image/img-6-hw2.jpeg"
-                    alt="Книга"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/ds/webp/portfolio_3-ds.webp    1x,
+                        ./image/ds/webp/portfolio_3-ds@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp" />
+                    <source
+                      srcset="
+                        ./image/ds/jpeg/portfolio_7-ds.jpeg  1x,
+                        ./image/ds/@2x/portfolio_7-ds@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="
+                        ./image/tb/webp/portfolio_7-tb.webp    1x,
+                        ./image/tb/webp/portfolio_7-tb@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp" />
+                    <source
+                      srcset="
+                        ./image/tb/jpeg/portfolio_7-tb.jpeg   1x,
+                        ./image/tb/@2x/portfolio_7-tb@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="
+                        ./image/mb/webp/portfolio_7-mb.webp    1x,
+                        ./image/mb/webp/portfolio_7-mb@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp" />
+                    <source
+                      srcset="./image/mb/@2x/portfolio_7-mb@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg" />
+                    <img
+                      class="portfolio__pic"
+                      src="./image/mb/jpeg/portfolio_7-mb.jpg"
+                      alt="Книга"
+                      width="370"
+                      height="294"
+                  /></picture>
                   <div class="portfolio__overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -279,13 +678,60 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__pic"
-                    src="./image/img-7-hw2.jpeg"
-                    alt="Ярлык"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/ds/webp/portfolio_8-ds.webp    1x,
+                        ./image/ds/webp/portfolio_8-ds@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./image/ds/jpeg/portfolio_8-ds.jpeg  1x,
+                        ./image/ds/@2x/portfolio_8-ds@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/tb/webp/portfolio_8-tb.webp    1x,
+                        ./image/tb/webp/portfolio_8-tb@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./image/tb/jpeg/portfolio_8-tb.jpeg   1x,
+                        ./image/tb/@2x/portfolio_8-tb@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/mb/webp/portfolio_8-mb.webp    1x,
+                        ./image/mb/webp/portfolio_8-mb@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./image/mb/@2x/portfolio_8-mb@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="portfolio__pic"
+                      src="./image/mb/jpeg/portfolio_8-mb.jpg"
+                      alt="Ярлык"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -306,13 +752,53 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__pic"
-                    src="./image/img-8-hw2.jpeg"
-                    alt="Человек печатает на ноутбуке"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/ds/webp/portfolio_9-ds.webp    1x,
+                        ./image/ds/webp/portfolio_9-ds@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp" />
+                    <source
+                      srcset="
+                        ./image/ds/jpeg/portfolio_9-ds.jpeg  1x,
+                        ./image/ds/@2x/portfolio_9-ds@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="
+                        ./image/tb/webp/portfolio_9-tb.webp    1x,
+                        ./image/tb/webp/portfolio_9-tb@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp" />
+                    <source
+                      srcset="
+                        ./image/tb/jpeg/portfolio_9-tb.jpeg   1x,
+                        ./image/tb/@2x/portfolio_9-tb@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="
+                        ./image/mb/webp/portfolio_9-mb.webp    1x,
+                        ./image/mb/webp/portfolio_9-mb@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp" />
+                    <source
+                      srcset="./image/mb/@2x/portfolio_9-mb@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg" />
+                    <img
+                      class="portfolio__pic"
+                      src="./image/mb/jpeg/portfolio_9-mb.jpg"
+                      alt="Человек печатает на ноутбуке"
+                      width="370"
+                      height="294"
+                  /></picture>
                   <div class="portfolio__overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -336,92 +822,91 @@
     </main>
     <!--Футер-->
     <footer class="footer">
-      <div class="container">
-        <div class="footer__container">
-          <div class="footer__address">
-            <a href="./index.html" class="logo-link logo-link__footer" lang="en"
-              ><span class="logo-link__web">Web</span
-              ><span class="logo-link__studio">Studio</span></a
-            >
-            <address class="address">
-              <ul class="address__list">
-                <li class="address__item">
-                  <a
-                    href="https://goo.gl/maps/HDMTTbNd2vz2HDnC8"
-                    target="_blank"
-                    rel="noreferr noopener"
-                    class="address__link"
-                    >г. Киев, пр-т Леси Украинки, 26</a
-                  >
-                </li>
-                <li class="address__item">
-                  <a
-                    href="mailto:info@devstudio.com"
-                    class="address__auth-link"
-                    lang="en"
-                    >info@devstudio.com</a
-                  >
-                </li>
-                <li class="address__item">
-                  <a href="tel:+380961111111" class="address__auth-link"
-                    >+38 096 111 11 11</a
-                  >
-                </li>
-              </ul>
-            </address>
-          </div>
-          <div class="footer__social">
-            <h2 class="footer__title">присоединяйтесь</h2>
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a class="footer__link" href=""
-                  ><svg class="footer__icon" width="20" height="20">
-                    <use href="./image/icons.svg#instagram"></use>
-                  </svg>
-                </a>
+      <div class="container footer__container">
+        <div class="footer__address">
+          <a href="./index.html" class="logo-link logo-link__footer" lang="en"
+            ><span class="logo-link__web">Web</span
+            ><span class="logo-link__studio">Studio</span></a
+          >
+          <address class="address">
+            <ul class="address__list">
+              <li class="address__item">
+                <a
+                  href="https://goo.gl/maps/HDMTTbNd2vz2HDnC8"
+                  target="_blank"
+                  rel="noreferr noopener"
+                  class="address__link"
+                  >г. Киев, пр-т Леси Украинки, 26</a
+                >
               </li>
-              <li class="footer__item">
-                <a class="footer__link" href=""
-                  ><svg class="footer__icon" width="20" height="20">
-                    <use href="./image/icons.svg#twitter"></use>
-                  </svg>
-                </a>
+              <li class="address__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="address__auth-link"
+                  lang="en"
+                  >info@devstudio.com</a
+                >
               </li>
-              <li class="footer__item">
-                <a class="footer__link" href=""
-                  ><svg class="footer__icon" width="20" height="20">
-                    <use href="./image/icons.svg#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href=""
-                  ><svg class="footer__icon" width="20" height="20">
-                    <use href="./image/icons.svg#linkedin"></use>
-                  </svg>
-                </a>
+              <li class="address__item">
+                <a href="tel:+380961111111" class="address__auth-link"
+                  >+38 096 111 11 11</a
+                >
               </li>
             </ul>
-          </div>
-          <div class="footer__subscribe subscribe">
-            <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
-            <form class="subscribe__form">
-              <input
-                class="subscribe__input"
-                type="email"
-                name="email"
-                placeholder="E-mail"
-              />
-              <button class="button subscribe__button" type="submit">
-                Подписаться
-                <svg class="subscribe__icon" width="24" height="24">
-                  <use href="./image/icons.svg#icon-send"></use>
+          </address>
+        </div>
+        <div class="footer__social">
+          <h2 class="footer__title">присоединяйтесь</h2>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href=""
+                ><svg class="footer__icon" width="20" height="20">
+                  <use href="./image/icons.svg#instagram"></use>
                 </svg>
-              </button>
-            </form>
-          </div>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href=""
+                ><svg class="footer__icon" width="20" height="20">
+                  <use href="./image/icons.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href=""
+                ><svg class="footer__icon" width="20" height="20">
+                  <use href="./image/icons.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href=""
+                ><svg class="footer__icon" width="20" height="20">
+                  <use href="./image/icons.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__subscribe subscribe">
+          <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
+          <form class="subscribe__form">
+            <input
+              class="subscribe__input"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+            />
+            <button class="button subscribe__button" type="submit">
+              Подписаться
+              <svg class="subscribe__icon" width="24" height="24">
+                <use href="./image/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
+    <script src="./mobile-menu.js"></script>
   </body>
 </html>

@@ -2,7 +2,18 @@
 .button__list {
   @include flex();
   margin-bottom: $margin-list-set;
+
+  @include mq(tablet) {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
 }
 .button__item:not(:last-child) {
   margin-right: 8px;
+  @include mq(mobile) {
+    &:nth-child(-n + 3) {
+      margin-bottom: 15px;
+    }
+  }
 }

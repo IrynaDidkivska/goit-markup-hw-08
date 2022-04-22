@@ -1,20 +1,73 @@
-.mobile-menu {
-  background-color: aqua;
-  padding: 20px;
+@import "../components/mobile-menu__nav";
+.menu-btn {
+  position: relative;
+  display: inline-flex;
 
-  @media screen and (max-width: 767px) {
+  padding: 0;
+  color: $menu-btn;
+  background-color: transparent;
+  border: none;
+  outline: transparent;
+  cursor: pointer;
+  z-index: 99;
+  transition: color $timing-function;
+
+  &:hover &__icon-open,
+  &:focus &__icon-open {
+    fill: $btn-main-bgc;
+  }
+  @include mq(tablet) {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
+  }
 
-    //   &.is-open {
-    //     display: block;
-    //   }
+  &.is-active &__icon-open {
+    opacity: 1;
+    fill: $link-main;
+  }
+  &.is-active &__icon-close {
+    opacity: 0;
+  }
 
-    @media screen and (min-width: 768px) {
-      display: flex;
-    }
+  &__icon-close {
+    opacity: 1;
+    fill: $link-main;
+  }
+
+  &__icon-open {
+    opacity: 0;
+  }
+}
+.menu-btn__icon {
+  fill: currentColor;
+
+  transition: fill $timing-function;
+
+  &:hover .menu-btn__icon-open,
+  &:hover .menu-btn__icon-close {
+    fill: $link-accent;
+  }
+}
+.menu-mobile {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px;
+  padding-top: 48px;
+  display: none;
+  text-align: left;
+  background-color: $bgc-mobile;
+
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: transform $timing-function;
+  pointer-events: none;
+
+  &.is-open {
+    display: block;
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: initial;
   }
 }
