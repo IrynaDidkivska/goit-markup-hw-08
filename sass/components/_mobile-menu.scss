@@ -23,6 +23,7 @@
   &.is-active &__icon-open {
     opacity: 1;
     fill: $link-main;
+    transition: opacity $timing-function, fill $timing-function;
   }
   &.is-active &__icon-close {
     opacity: 0;
@@ -31,6 +32,7 @@
   &__icon-close {
     opacity: 1;
     fill: $link-main;
+    transition: opacity $timing-function, fill $timing-function;
   }
 
   &__icon-open {
@@ -49,23 +51,29 @@
 }
 .menu-mobile {
   position: absolute;
+  overflow-y: scroll;
   z-index: 10;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 40px;
-  padding-top: 48px;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+
   display: none;
   text-align: left;
   background-color: $bgc-mobile;
 
   transform: translateX(100%);
   visibility: hidden;
-  transition: transform $timing-function;
+  transition: transform $timing-function, visibility $timing-function;
   pointer-events: none;
 
   &.is-open {
-    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
     transform: translateX(0);
     visibility: visible;
     pointer-events: initial;

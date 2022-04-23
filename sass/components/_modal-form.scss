@@ -75,7 +75,7 @@
   }
 }
 .consent {
-  @include flex();
+  display: flex;
 
   margin-top: 20px;
   margin-bottom: $margin-list-set;
@@ -110,8 +110,7 @@
 }
 .consent__icon {
   display: inline-block;
-  top: 0;
-  left: 0;
+  flex-shrink: 0;
 
   border: 2px solid $form-title-text;
   fill: currentColor;

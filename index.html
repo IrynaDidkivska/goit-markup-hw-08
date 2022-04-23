@@ -17,14 +17,14 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body modal-open>
+  <body>
     <!--Шапка-->
     <header class="header">
       <div class="container header__container">
         <a class="logo-link" href="./index.html" lang="en"
           ><span class="logo-link__web">Web</span>Studio</a
         >
-        <!-- Мобильное меню -->
+        <!-- Мобильное меню start-->
         <button class="menu-btn is-active" type="button" data-menu-button>
           <svg
             class="menu-btn__icon"
@@ -46,65 +46,63 @@
           </svg>
         </button>
         <div class="menu-mobile" id="menu-mobile" data-menu>
-          <nav class="menu-mobile__nav">
-            <ul class="menu-mobile__list">
-              <li class="menu-mobile__item">
+          <ul class="menu-mobile__list">
+            <li class="menu-mobile__item">
+              <a
+                href="./index.html"
+                class="menu-mobile__link menu-mobile__link--current"
+                >Студия</a
+              >
+            </li>
+            <li class="menu-mobile__item">
+              <a href="./portfolio.html" class="menu-mobile__link">Портфолио</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="/Контакты" class="menu-mobile__link">Контакты</a>
+            </li>
+          </ul>
+          <div class="menu-mobile__group">
+            <ul class="mobile__auth-nav">
+              <li class="mobile__auth__item">
+                <a href="tel:+380961111111" class="mobile__auth__tel">
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile__auth__item">
                 <a
-                  href="./index.html"
-                  class="menu-mobile__link menu-mobile__link--current"
-                  >Студия</a
+                  class="mobile__auth__email"
+                  href="mailto:info@devstudio.com"
+                  lang="en"
                 >
-              </li>
-              <li class="menu-mobile__item">
-                <a href="./portfolio.html" class="menu-mobile__link"
-                  >Портфолио</a
+                  info@devstudio.com</a
                 >
-              </li>
-              <li class="menu-mobile__item">
-                <a href="/Контакты" class="menu-mobile__link">Контакты</a>
               </li>
             </ul>
-          </nav>
-
-          <ul class="mobile__auth-nav">
-            <li class="mobile__auth__item">
-              <a href="tel:+380961111111" class="mobile__auth__tel">
-                +38 096 111 11 11</a
-              >
-            </li>
-            <li class="mobile__auth__item">
-              <a
-                class="mobile__auth__email"
-                href="mailto:info@devstudio.com"
-                lang="en"
-              >
-                info@devstudio.com</a
-              >
-            </li>
-          </ul>
-          <ul class="mobile__socials">
-            <li class="mobile__item">
-              <a href="https://www.instagram.com/" class="mobile__link"
-                >Instagram</a
-              >
-            </li>
-            <li class="mobile__item">
-              <a href="" class="mobile__link">Twitter</a>
-            </li>
-            <li class="mobile__item">
-              <a href="https://www.facebook.com/" class="mobile__link"
-                >Facebook</a
-              >
-            </li>
-            <li class="mobile__item">
-              <a
-                href="https://www.linkedin.com/"
-                class="mobile__link mobile__link--content"
-                >LinkedIn</a
-              >
-            </li>
-          </ul>
+            <ul class="mobile__socials">
+              <li class="mobile__item">
+                <a href="https://www.instagram.com/" class="mobile__link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mobile__item">
+                <a href="" class="mobile__link">Twitter</a>
+              </li>
+              <li class="mobile__item">
+                <a href="https://www.facebook.com/" class="mobile__link"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mobile__item">
+                <a
+                  href="https://www.linkedin.com/"
+                  class="mobile__link mobile__link--content"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+        <!-- Мобильное меню finish-->
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -215,8 +213,8 @@
               </svg>
               <span class="consent__text">
                 Соглашаюсь с рассылкой и принимаю
-                <a class="consent__link" href="http:/">Условия договора</a>
-              </span></label
+                <a class="consent__link" href="">Условия договора</a></span
+              ></label
             >
             <button class="button form__button" type="submit">Отправить</button>
           </form>

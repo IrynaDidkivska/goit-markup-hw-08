@@ -9,39 +9,24 @@
 }
 .clients {
   @include flex();
-  flex-wrap: wrap;
-  margin-bottom: -30px;
 
-  @media screen and (min-width: $mobile) and (max-width: 1199px) {
-    justify-content: space-between;
-  }
+  flex-wrap: wrap;
+  margin-bottom: -$margin-list-set;
   @include mq(desktop) {
     flex-wrap: nowrap;
   }
 }
 
 .clients__item {
-  width: 210px;
-  height: 92px;
-
+  flex-grow: 2;
+  flex-basis: calc((100% - 60px) / 2);
   margin-bottom: $margin-list-set;
-
-  @include mq(mobile) {
-    &:nth-child(-n + 4) {
-      margin-bottom: $margin-list-set;
-    }
-  }
-  @include mq(tablet) {
-    width: 226px;
-    margin-right: 0;
-  }
   @include mq(tablet-only) {
-    &:nth-child(-n + 3) {
-      margin-bottom: $margin-list-set;
+    margin-right: $margin-list-set;
+    flex-basis: calc((100% - 90px) / 3);
+    &:nth-child(3n + 3) {
+      margin-right: 0;
     }
-  }
-  @include mq(desktop) {
-    width: 170px;
   }
   @include mq(desktop) {
     &:not(:last-child) {
@@ -49,9 +34,15 @@
     }
   }
 }
+@include mq(mobile-only) {
+  .clients__item:nth-child(odd) {
+    margin-right: $margin-list-set;
+  }
+}
 
 .clients__link {
   @include flex();
+  padding: 16px 0;
   width: 100%;
   height: 100%;
 
@@ -68,4 +59,5 @@
 }
 .clients__icon {
   fill: currentColor;
+  transition: fill $timing-function;
 }

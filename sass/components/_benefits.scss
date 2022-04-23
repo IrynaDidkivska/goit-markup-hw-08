@@ -10,8 +10,6 @@
   }
 }
 .benefits__item {
-  margin: auto;
-  max-width: 450px;
   @include mq(tablet-only) {
     max-width: 354px;
     margin-top: 0;
