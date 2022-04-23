@@ -3,12 +3,13 @@
 
 .portfolio {
   margin-bottom: -$margin-list-set;
+  display: flex;
+  flex-wrap: nowrap;
 
   @include mq(mobile-only) {
     display: inline-block;
   }
   @include mq(tablet) {
-    display: flex;
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
@@ -19,7 +20,6 @@
   background: $bgc-mobile;
 
   @include mq(tablet) {
-    display: flex;
     margin-left: 15px;
     margin-right: 15px;
   }
@@ -44,6 +44,7 @@
   @include mq(tablet-only) {
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 }
 .portfolio__thumb {
