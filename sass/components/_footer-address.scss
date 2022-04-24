@@ -1,5 +1,7 @@
 .footer__address {
-  margin-bottom: 60px;
+  @include mq(mobile-only) {
+    margin-bottom: 60px;
+  }
 
   @include mq(tablet-only) {
     justify-content: center;

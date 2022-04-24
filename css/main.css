@@ -215,7 +215,6 @@ body {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin-top: 20px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 10px;
@@ -772,7 +771,6 @@ body {
 
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/tb/jpeg/Header-tb.jpeg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/tb/jpeg/Header-tb.jpeg);
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), -webkit-image-set(url(../image/tb/webp/Header-tb.webp) 1x);
@@ -789,7 +787,6 @@ body {
 
 @media screen and (min-width: 1200px) {
   .hero {
-    max-width: 1200px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/ds/jpeg/Header-ds.jpeg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/ds/jpeg/Header-ds.jpeg);
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), -webkit-image-set(url(../image/ds/webp/Header-ds.webp) 1x);
@@ -1517,8 +1514,10 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer__address {
-  margin-bottom: 60px;
+@media screen and (max-width: 767.98px) {
+  .footer__address {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
@@ -1882,7 +1881,6 @@ body {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin-top: 20px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 10px;
@@ -2038,7 +2036,6 @@ body {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin-top: 20px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 10px;

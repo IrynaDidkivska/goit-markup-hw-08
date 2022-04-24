@@ -40,7 +40,6 @@
       -webkit-image-set(url(../image/mb/webp/Header-mb@2x.webp) 2x);
   }
   @include mq(tablet) {
-    max-width: $tablet;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -74,7 +73,6 @@
     }
   }
   @include mq(desktop) {
-    max-width: $desktop;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
